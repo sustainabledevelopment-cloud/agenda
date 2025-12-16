@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإفصاحات المتعلقة بالاستدامة والمناخ: الفرص والتحديات </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark-blue: #1B3A52;
+            --dark-gold: #B8860B;
+            --sustainability-green: #2D5016;
+            --sky-blue: #4A90E2;
+            --light-gold: #D4AF37;
+            --white: #FFFFFF;
+            --text-light: #E8E8E8;
+            --accent: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, var(--primary-dark-blue) 0%, #0d1f2d 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .animated-bg::before,
+        .animated-bg::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .animated-bg::before {
+            width: 400px;
+            height: 400px;
+            top: 10%;
+            right: 10%;
+            background: var(--sky-blue);
+        }
+
+        .animated-bg::after {
+            width: 300px;
+            height: 300px;
+            bottom: 15%;
+            left: 5%;
+            background: var(--sustainability-green);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(30px); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-logo-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-logo {
+             display: block;
+             width: 67%;
+             height: auto;
+             max-width: 100%;
+            filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.3));
+            animation: slideDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--light-gold);
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #E8E8E8;
+            margin-bottom: 20px;
+        }
+
+        .event-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .meta-item {
+            padding: 10px 20px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--dark-gold);
+            border-radius: 25px;
+            font-size: 0.95rem;
+            color: var(--light-gold);
+        }
+
+        .agenda-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #E8E8E8;
+            border-bottom: 3px solid var(--dark-gold);
+            padding-bottom: 15px;
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            right: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: transparent;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-right: 70px;
+            animation: fadeInRight 0.6s ease-out backwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+        .timeline-item:nth-child(6) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(7) { animation-delay: 0.7s; }
+        .timeline-item:nth-child(8) { animation-delay: 0.8s; }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-radius: 50%;
+            border: none;
+            box-shadow: none;
+            display: none;
+        }
+
+        .timeline-content {
+            background: rgba(27, 58, 82, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .timeline-content:hover {
+            background: rgba(27, 58, 82, 0.95);
+            border-color: var(--dark-gold);
+            transform: translateX(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .time {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #E8E8E8;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--light-gold);
+            margin-bottom: 8px;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .speaker-name {
+            font-size: 0.9rem;
+            color: #E8E8E8;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .speaker-card {
+            background: linear-gradient(135deg, rgba(27, 58, 82, 0.8), rgba(45, 80, 22, 0.6));
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: zoomIn 0.6s ease-out backwards;
+        }
+
+        .speaker-card:nth-child(1) { animation-delay: 0.1s; }
+        .speaker-card:nth-child(2) { animation-delay: 0.2s; }
+        .speaker-card:nth-child(3) { animation-delay: 0.3s; }
+        .speaker-card:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .speaker-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--light-gold);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .speaker-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--dark-gold), var(--sky-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .speaker-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(212, 175, 55, 0.3);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            color: var(--light-gold);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .timeline::before {
+                right: 10px;
+            }
+
+            .timeline-item {
+                padding-right: 50px;
+            }
+
+            .event-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .speakers-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <div class="container">
+        <header>
+            <div class="header-logo-container">
+                <img src="./لوجو الهيئة.png" alt="الهيئة العامة للرقابة المالية" class="header-logo">
+            </div>
+            <h1>الإفصاحات المتعلقة بالاستدامة والمناخ: الفرص والتحديات</h1>
+            <div class="event-meta">
+                <div class="meta-item">📅 التاريخ: 25/12/2025</div>
+                <div class="meta-item" <a href="https://maps.app.goo.gl/9jCfUh1hDL9dqBmr6" class="location-link" target="_blank"></a> >📍 المكان: مقر الهيئة العامة للرقابة المالية
+مبني 136 –مسرح الدكتور أشرف الشرقاوى 
+</div>
+                <div class="meta-item">من 9:30 صباحاً</div>
+            </div>
+        </header>
+
+        <section class="agenda-section">
+            <h2 class="section-title"> جدول أعمال الاحتفالية</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="time">9:30 – 10:00</div>
+                        <div class="title">تسجيل واستقبال ممثلي الشركات</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="time">10:00 – 10:10</div>
+                        <div class="title">الكلمة الافتتاحية</div>
+                        <div class="speaker-name">👤 أ/محمد الصياد – نائب رئيس الهيئة</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="time">10:10 – 12:00</div>
+                        <div class="title">عرض نتائج التقرير السنوي</div>
+                        <div class="description">عرض نتائج التقرير السنوي الخاص بتقييم إفصاحات الاستدامة والمناخ، وشرح منهجية وآلية التقييم المُستخدمة في التحليل الفني للتقرير</div>
+                        <div class="speaker-name">👤 أ/ آية علي – مدير الإدارة العامة للتنمية المستدامة</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="time">12:00 – 12:30</div>
+                        <div class="title">الاستفسارات والتساؤلات من ممثلي الشركات</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="time">12:30 – 1:00</div>
+                        <div class="title">استراحة قهوة</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="time">1:00 – 1:10</div>
+                        <div class="title">كلمة رئيس الهيئة</div>
+                        <div class="speaker-name">👤 معالي الوزير الدكتور/ محمد فريد – رئيس الهيئة العامة للرقابة المالية</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="time">1:10 – 1:20</div>
+                        <div class="title">كلمة رئيس البورصة</div>
+                        <div class="speaker-name">👤 الدكتور/ إسلام عزام – رئيس البورصة المصرية</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="time">1:20 – 1:40</div>
+                        <div class="title">نكريم الشركات</div>
+                        <div class="description"> تكريم الشركات التي حققت أداءًا متميزًا في الإفصاح عن الممارسات البيئية والمجتمعية والحوكمة المتعلقة بالاستدامة (ESG)، والافصاح عن الآثاار المالية للتغيرات المناخية (TCFD) معدلات تقييم في التحليل الفني للافصاحات</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-logo"> الهيئة العامة للرقابة المالية</div>
+            <p style="margin-top: 10px; font-size: 0.85rem;">© 2025 جميع الحقوق محفوظة</p>
+        </footer>
+    </div>
+</body>
+</html>
